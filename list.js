@@ -154,7 +154,9 @@ function getS3Data(marker, html) {
 }
 
 function buildNavigation(info) {
-  var root = '<a href="?prefix=">' + BUCKET_WEBSITE_URL + '</a> / ';
+  var WEBSITE_DIR_TITLE = 'downloads';
+      var root = '<a href='+ BUCKET_WEBSITE_URL +'?prefix=>' + WEBSITE_DIR_TITLE + '</a> / ';
+  // var root = '<a href="?prefix=">' + BUCKET_WEBSITE_URL + '</a> / ';
   if (info.prefix) {
     var processedPathSegments = '';
     var content = $.map(info.prefix.split('/'), function(pathSegment) {
